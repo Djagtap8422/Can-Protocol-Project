@@ -64,7 +64,7 @@ main()
 	Enable_EINT0();
 	Enable_EINT1();
 
-	BuildCGRAM(&cgramLUT[0][0], 56); // 6 patterns × 8 bytes
+	BuildCGRAM(&cgramLUT[0][0], 56); // 6 patterns Ã— 8 bytes
 					 //		delay_ms(100);
 
 	rxF.Data1=0;
@@ -232,63 +232,6 @@ void BuildCGRAM(u8 *p,u8 nBytes)
 }
 
 
-/*
-   extern u8 cgramLUT[][8] =
-   {
-   {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00},  // Cap only (almost empty)
-   {0x07, 0x1F, 0x11, 0x11, 0x11, 0x11, 0x11, 0x1F},  // 1/5 full
-   {0x07, 0x1F, 0x11, 0x11, 0x11, 0x11, 0x1F, 0x1F},  // 2/5 full
-   {0x07, 0x1F, 0x11, 0x11, 0x11, 0x1F, 0x1F, 0x1F},  // 3/5 full
-   {0x07, 0x1F, 0x11, 0x11, 0x1F, 0x1F, 0x1F, 0x1F},  // 4/5 full
-   {0x07, 0x1F, 0x11, 0x1F, 0x1F, 0x1F, 0x1F, 0x1F}  // Fully filled
-   };
-   */
+                                                           
 
-//BuildCGRAM(&cgramLUT[0][0], 48); // 6 * 8 = 48 bytes
-
-/*
-   if (level <= 20)
-   {
-   cmdLCD(GOTO_LINE4_POS0+8);
-   U32LCD(srxF.Data1);
-   cmdLCD(GOTO_LINE4_POS0+15);
-   strLCD("Low");
-   }
-   else if (level <= 40)
-   {
-   cmdLCD(GOTO_LINE4_POS0+8);
-   U32LCD(rxF.Data1);
-   cmdLCD(GOTO_LINE4_POS0+15);
-   strLCD("MedLow");
-   }
-   else if (level <= 60)
-   {
-   cmdLCD(GOTO_LINE4_POS0+8);
-   U32LCD(rxF.Data1);
-   cmdLCD(GOTO_LINE4_POS0+15);
-   strLCD("Medium");
-   }
-   else if (level <= 80)
-   {
-   cmdLCD(GOTO_LINE4_POS0+8);
-   U32LCD(rxF.Data1);
-   cmdLCD(GOTO_LINE4_POS0+15);
-   strLCD("High");
-   }
-   else if (level <= 100) 
-   {	
-   cmdLCD(GOTO_LINE4_POS0+8);
-   U32LCD(rxF.Data1);
-   cmdLCD(GOTO_LINE4_POS0+15);
-   strLCD("Full");
-   }
-   else 
-   {
-   cmdLCD(GOTO_LINE4_POS0+15);
-   strLCD("   ND         ");
-   }
-   delay_ms(500);
-   }			 */
-// }
-//	 delay_ms(500);                                                           
 
