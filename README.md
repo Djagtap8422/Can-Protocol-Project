@@ -1,2 +1,2 @@
-# Can-Protocol-Project
-can
+# CAN_PROTOCOL_PROJECT
+can project description
